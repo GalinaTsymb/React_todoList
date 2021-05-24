@@ -69,6 +69,7 @@ const App = props => {
 
     const sendInputValue = () => {
         const inputValue = addInputRef.current.value;
+        if(!inputValue) return;
         addTodo(inputValue);
         addInputRef.current.value = '';
     };

@@ -32,7 +32,6 @@ const reducer = (state = initialState, action) => {
     case 'ADD_TODO':
       const  newNameTodo            = action.payload;
       let { todos_in_progress }     = state;
-      if(newNameTodo === '') return state;
       const newId                   = todos_in_progress[todos_in_progress.length-1].id + 1;
 
       //   если todos осталась одна - это значит у неё уже есть есть кнопки Complete and Delete.
